@@ -17,6 +17,7 @@ class App extends Component {
       name: data.name,
       number: data.number,
     };
+
     this.state.contacts.some(
       contact => contact.name.toLowerCase() === data.name.toLowerCase()
     )
@@ -56,7 +57,7 @@ class App extends Component {
         }}
       >
         <h1>Phonebook</h1>
-        <ContactForm onSubmit={this.formSubmitHandler} />
+        <ContactForm onFormSubmit={this.formSubmitHandler} />
 
         <h2>Contacts</h2>
         <Filter value={filter} onChange={this.changeFilter} />
